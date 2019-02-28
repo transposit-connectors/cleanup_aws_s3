@@ -1,6 +1,6 @@
 (params) => {	
   	// get a list of keys to delete
-  	let bundlesToDelete = api.run("this.delete_dryrun", {bucketName: params.bucketName, threshold: params.threshold});
+  	let bundlesToDelete = api.run("this.delete_dryrun", {bucketName: params.bucketName, threshold: params.threshold, prefix: params.prefixName});
     // delete management bundles older than twoWeeksBeforeLastDeploy
   	bundlesToDelete.forEach(function(bd) {
     	let result = api.run("aws_s3.delete_object", {Bucket: params.bucketName, Key: bd['Key']});

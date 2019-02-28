@@ -20,6 +20,9 @@
               "text": "14"
             },
             "type": "INTEGER"
+          }, {
+            "name": "prefixName",
+            "type": "STRING"
           }],
           "js": "delete_old_s3_objects.js"
         }
