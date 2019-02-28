@@ -22,8 +22,14 @@
             return new Date(b['LastModified']) - new Date(a['LastModified']);
         }
     ));
-  api.log("Here are the objects to be deleted: ");
-  return bundlesToDelet;
+  	
+  	if (bundlesToDelete.length == 0) {
+       api.log("There is nothing to delete :)");
+    } else {
+       api.log("Here are the objects to be deleted: ");
+    }
+ 
+  return bundlesToDelete;
 }
 
 /*

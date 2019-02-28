@@ -23,7 +23,7 @@
           "parameters": [{
             "name": "prefixName",
             "default": {
-              "text": "[file or object prefix]"
+              "text": "management"
             },
             "type": "STRING"
           }, {
