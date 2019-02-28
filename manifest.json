@@ -30,12 +30,6 @@
         "id": "get_objects",
         "tql": {
           "parameters": [{
-            "name": "prefixName",
-            "default": {
-              "text": "management"
-            },
-            "type": "STRING"
-          }, {
             "name": "bucketName",
             "default": {
               "text": "[s3 bucket name]"
