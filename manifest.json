@@ -30,10 +30,7 @@
         "id": "get_objects",
         "tql": {
           "parameters": [{
-            "name": "bucketName",
-            "default": {
-              "text": "[s3 bucket name]"
-            },
+            "name": "prefixName",
             "type": "STRING"
           }],
           "tql": "SELECT * FROM aws_s3.list_objects\n  WHERE Bucket=@bucketName\n  AND prefix=@prefixName"
