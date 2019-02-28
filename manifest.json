@@ -14,26 +14,47 @@
               "text": "[enter your s3 bucket name]"
             },
             "type": "STRING"
+          }, {
+            "name": "threshold",
+            "default": {
+              "text": "14"
+            },
+            "type": "INTEGER"
+          }, {
+            "name": "prefixName",
+            "type": "STRING"
           }],
           "js": "delete_old_s3_objects.js"
         }
       }, {
-        "id": "get_management_bundles",
+        "id": "get_objects",
         "tql": {
           "parameters": [{
             "name": "prefixName",
-            "default": {
-              "text": "[file or object prefix]"
-            },
             "type": "STRING"
           }, {
             "name": "bucketName",
-            "default": {
-              "text": "[s3 bucket name]"
-            },
             "type": "STRING"
           }],
           "tql": "SELECT * FROM aws_s3.list_objects\n  WHERE Bucket=@bucketName\n  AND prefix=@prefixName"
+        }
+      }, {
+        "id": "delete_dryrun",
+        "function": {
+          "parameters": [{
+            "name": "threshold",
+            "default": {
+              "text": "14"
+            },
+            "type": "INTEGER"
+          }, {
+            "name": "prefixName",
+            "type": "STRING"
+          }, {
+            "name": "bucketName",
+            "type": "STRING"
+          }],
+          "js": "delete_dryrun.js"
         }
       }],
       "dataConnections": [{
