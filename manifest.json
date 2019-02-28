@@ -9,12 +9,6 @@
         "id": "delete_old_s3_objects",
         "function": {
           "parameters": [{
-            "name": "bucketName",
-            "default": {
-              "text": "[enter your s3 bucket name]"
-            },
-            "type": "STRING"
-          }, {
             "name": "threshold",
             "default": {
               "text": "14"
@@ -22,6 +16,9 @@
             "type": "INTEGER"
           }, {
             "name": "prefixName",
+            "type": "STRING"
+          }, {
+            "name": "bucketName",
             "type": "STRING"
           }],
           "js": "delete_old_s3_objects.js"
