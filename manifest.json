@@ -14,6 +14,20 @@
           "requireUser": true
         }
       }],
+      "dataConnections": [{
+        "ref": "aws_s3.raw",
+        "overrides": {
+          "swagger": {
+            "awsConfig": {
+              "region": "us-west-2",
+              "service": "s3"
+            },
+            "baseUrl": "https://s3.us-west-2.amazonaws.com",
+            "executionLimits": {
+            }
+          }
+        }
+      }],
       "javascriptAPIVersion": "3",
       "source": "src"
     }
