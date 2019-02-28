@@ -6,12 +6,14 @@
         "alias": "aws_s3"
       }],
       "operations": [{
+        "id": "abort_multipart_upload",
+        "tql": {
+          "tql": "SELECT * FROM aws_s3.abort_multipart_upload\n  WHERE Bucket='<required_string>'\n  AND Key='<required_string>'\n  AND uploadId='<string>'"
+        }
+      }, {
         "id": "delete_old_s3_objects",
         "function": {
-          "js": "hello_world.js"
-        },
-        "access": {
-          "requireUser": true
+          "js": "delete_old_s3_objects.js"
         }
       }],
       "dataConnections": [{
