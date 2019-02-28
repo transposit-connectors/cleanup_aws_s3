@@ -13,7 +13,14 @@
       }, {
         "id": "get_management_bundles",
         "tql": {
-          "tql": "SELECT * FROM aws_s3.abort_multipart_upload\n  WHERE Bucket='<required_string>'\n  AND Key='<required_string>'\n  AND uploadId='<string>'"
+          "parameters": [{
+            "name": "prefix",
+            "default": {
+              "text": "management"
+            },
+            "type": "STRING"
+          }],
+          "tql": "SELECT * FROM aws_s3.list_objects\n  WHERE Bucket=@bucketName\n  AND prefix=@prefix"
         }
       }],
       "dataConnections": [{
