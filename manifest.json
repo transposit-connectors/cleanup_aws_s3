@@ -38,6 +38,13 @@
       }, {
         "id": "delete_dryrun",
         "function": {
+          "parameters": [{
+            "name": "bucketName",
+            "default": {
+              "text": "stage.static.transposit.com"
+            },
+            "type": "STRING"
+          }],
           "js": "delete_dryrun.js"
         }
       }],
