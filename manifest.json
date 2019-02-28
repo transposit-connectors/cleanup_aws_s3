@@ -35,6 +35,11 @@
           }],
           "tql": "SELECT * FROM aws_s3.list_objects\n  WHERE Bucket=@bucketName\n  AND prefix=@prefixName"
         }
+      }, {
+        "id": "delete_dryrun",
+        "function": {
+          "js": "delete_dryrun.js"
+        }
       }],
       "dataConnections": [{
         "ref": "aws_s3.raw",
