@@ -32,6 +32,9 @@
           "parameters": [{
             "name": "prefixName",
             "type": "STRING"
+          }, {
+            "name": "bucketName",
+            "type": "STRING"
           }],
           "tql": "SELECT * FROM aws_s3.list_objects\n  WHERE Bucket=@bucketName\n  AND prefix=@prefixName"
         }
