@@ -14,13 +14,13 @@
         "id": "get_management_bundles",
         "tql": {
           "parameters": [{
-            "name": "prefix",
+            "name": "prefixName",
             "default": {
               "text": "management"
             },
             "type": "STRING"
           }],
-          "tql": "SELECT * FROM aws_s3.list_objects\n  WHERE Bucket=@bucketName\n  AND prefix=@prefix"
+          "tql": "SELECT * FROM aws_s3.list_objects\n  WHERE Bucket=@bucketName\n  AND prefix=@prefixName"
         }
       }],
       "dataConnections": [{
