@@ -1,5 +1,5 @@
 (params) => {
-	let managementBundles = api.run("this.get_management_bundles",
+	let managementBundles = api.run("this.get_objects",
                                     {bucketName: params.bucketName});
 
   	// sort by timestamp, lastes -> oldest
