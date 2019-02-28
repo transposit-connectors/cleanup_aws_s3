@@ -11,7 +11,7 @@
           "parameters": [{
             "name": "bucketName",
             "default": {
-              "text": "stage.static.transposit.com"
+              "text": "[enter your s3 bucket name]"
             },
             "type": "STRING"
           }],
@@ -23,13 +23,13 @@
           "parameters": [{
             "name": "prefixName",
             "default": {
-              "text": "management"
+              "text": "[file or object prefix]"
             },
             "type": "STRING"
           }, {
             "name": "bucketName",
             "default": {
-              "text": "stage.static.transposit.com"
+              "text": "[s3 bucket name]"
             },
             "type": "STRING"
           }],
