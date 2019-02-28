@@ -50,6 +50,9 @@
           }, {
             "name": "prefixName",
             "type": "STRING"
+          }, {
+            "name": "bucketName",
+            "type": "STRING"
           }],
           "js": "delete_dryrun.js"
         }
