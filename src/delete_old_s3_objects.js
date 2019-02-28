@@ -25,7 +25,7 @@
   	
     // delete management bundles older than twoWeeksBeforeLastDeploy
   	bundlesToDelete.forEach(function(bd) {
-    	var result = api.run("aws_s3.delete_object", {Bucket: params.bucketName, Key: bd['Key']});
+    	let result = api.run("aws_s3.delete_object", {Bucket: params.bucketName, Key: bd['Key']});
         if (result[0] != 'success') {
           api.log("Failed to delete: " + bd['Key'] + " from bucket " + params.bucketName); 
         } else {
