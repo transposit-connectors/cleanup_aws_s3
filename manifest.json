@@ -8,6 +8,13 @@
       "operations": [{
         "id": "delete_old_s3_objects",
         "function": {
+          "parameters": [{
+            "name": "bucketName",
+            "default": {
+              "text": "stage.static.transposit.com"
+            },
+            "type": "STRING"
+          }],
           "js": "delete_old_s3_objects.js"
         }
       }, {
@@ -17,6 +24,12 @@
             "name": "prefixName",
             "default": {
               "text": "management"
+            },
+            "type": "STRING"
+          }, {
+            "name": "bucketName",
+            "default": {
+              "text": "stage.static.transposit.com"
             },
             "type": "STRING"
           }],
