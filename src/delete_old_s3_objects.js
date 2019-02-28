@@ -10,12 +10,12 @@
     );
   
   	
-  	var latestBundle = managementBundles[0];
-    var twoWeeksBeforeLastDeploy = new Date(latestBundle['LastModified']);
+  	let latestBundle = managementBundles[0];
+    let twoWeeksBeforeLastDeploy = new Date(latestBundle['LastModified']);
   	twoWeeksBeforeLastDeploy.setDate(twoWeeksBeforeLastDeploy.getDate() - params.threshold);
 	
   	// get a list of keys to delete
-  	var bundlesToDelete = managementBundles.filter(bundle => 
+  	let bundlesToDelete = managementBundles.filter(bundle => 
       new Date(bundle['LastModified']) < twoWeeksBeforeLastDeploy);
     api.log(bundlesToDelete.sort(
         function(a,b){
