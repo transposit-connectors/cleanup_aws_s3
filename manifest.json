@@ -1,6 +1,10 @@
 {
   "v2": {
     "transposit": {
+      "dependencies": [{
+        "name": "transposit/aws_s3:v2.*.*",
+        "alias": "aws_s3"
+      }],
       "operations": [{
         "id": "delete_old_s3_objects",
         "function": {
