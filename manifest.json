@@ -2,7 +2,7 @@
   "v2": {
     "transposit": {
       "dependencies": [{
-        "name": "transposit/aws_s3:v2.*.*",
+        "name": "transposit/aws_s3:v3.*.*",
         "alias": "aws_s3"
       }],
       "operations": [{
