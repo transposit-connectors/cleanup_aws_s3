@@ -33,7 +33,7 @@
             "name": "bucketName",
             "type": "STRING"
           }],
-          "tql": "SELECT * FROM aws_s3.list_objects\n  WHERE Bucket=@bucketName\n  AND prefix=@prefixName"
+          "tql": "SELECT * FROM aws_s3.list_objects_v2\n  WHERE Bucket=@bucketName\n  AND prefix=@prefixName"
         }
       }, {
         "id": "delete_dryrun",
