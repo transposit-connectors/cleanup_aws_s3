@@ -1,4 +1,5 @@
-# S3 cleanup
+# AWS S3 Cleanup
+
 In our AWS architecture, we use S3 to store static resources, and we get deploy errors when our S3 bucket gets full. Transposit allows us to create our own dynamic rules for cleaning up S3 buckets. This app finds all objects in your S3 bucket and deletes objects older than two weeks since the last deployment.
 
 ## Test against your own infrastructure
