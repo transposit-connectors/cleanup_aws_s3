@@ -80,6 +80,7 @@
       "javascriptAPIVersion": "3",
       "source": "src"
     },
-    "description": "Find objects in your S3 bucket, and delete objects deployed before a specified time."
+    "description": "Find objects in your S3 bucket, and delete objects deployed before a specified time.",
+    "displayName": "AWS S3 Cleanup"
   }
 }
